@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}Modificar socio{% endblock %}
+{% block content %}
+<div class="container mx-auto">
+    <h1>Modificar Informacion de Socio</h1>
+    <br>
+    <form action="" method="post">
+        <div class="opciones row">
+            <div class="col col-lg-4 col-md-3">
+                
+                <label for="basic-url" class="form-label">Ingresa DNI del socio que quieres modificar:</label>
+                <div class="input-group">
+                    <span class="input-group-text">DNI</span>
+                    <input name='dni' type="text" class="form-control" aria-describedby="basic-addon3" required>
+                </div>
+            </div>
+        </div>
+        <div class="msj_error w-25">{{mensaje}}</div>
+        <div class="row">
+            <div class="col">
+                <input type="submit" class="btn btn-warning mt-2" value="Modificar">
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="opciones w-50 ">
+    <p>Volver al inicio</p><span><a href="{{url_for("index")}}">🏠</a></span>
+    </div>
+</div>
+{%endblock%}

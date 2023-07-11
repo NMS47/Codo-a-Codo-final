@@ -1,0 +1,235 @@
+{% extends "layout.html" %}
+{%block head %}
+{{super()}}
+<link rel="stylesheet" href={{url_for('static', filename='css/deportes.css')}}>
+{%endblock%}
+{% block title %}Deportes{% endblock %}
+{% block content %}
+    <center><h1 style="color: white;">Nuestros deportes y actividades disponibles</h1></center>
+
+    <div id="tarjetasDeportes">
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/crossfit.jpeg')}} alt="crossfit">
+                <h3>Crossfit</h3>
+            </div>
+            <div class="face back">
+                <h3><i class="fa-solid fa-dumbbell"></i><br>Crossfit</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+
+                <button class="botonDetalles" id="btnCrossfit" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                
+                <img src={{url_for('static', filename='img/atletismoM.jpg')}} alt="atletismo">
+                <h3>Atletismo</h3>
+            </div>
+            <div class="face back">
+                <h3><i class="fa-solid fa-person-running"></i><br>Atletismo</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+
+                <button class="botonDetalles" id="btnAtletismo" type="button">DETALLES</button>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/futbol.jpg')}} alt="futbol">
+                <h3>Fútbol</h3>
+
+            </div>
+            <div class="face back">
+                <h3><i class="fa-regular fa-futbol"></i><br>Fútbol</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+
+                <button class="botonDetalles" id="btnFutbol" type="button">DETALLES</button>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/hockey.jpg')}} alt="hockey">
+                <h3>Hockey</h3>
+            </div>
+            <div class="face back">
+                <h3><img src={{url_for('static', filename='img/hockey-icon.png')}} width="30px"><br>Hockey</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnHockey" type="button">DETALLES</button>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/basketball.jpg')}} alt="basket">
+                <h3>Basketball</h3>
+            </div>
+            <div class="face back">
+                <h3><i class="fa-sharp fa-solid fa-basketball"></i><br>Basketball</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnBasketball" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/artesMarciales.jpg')}} alt="ArtesMarciales">
+                <h3>Artes Marciales</h3>
+            </div>
+            <div class="face back">
+                <h3><img src={{url_for('static', filename='img/artesMarciales-icon.png')}} width="30px"><br>Artes Marciales</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnArtesMarciales" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/pingPong3.jpg')}} alt="pingPing">
+                <h3>Ping Pong</h3>
+            </div>
+            <div class="face back">
+                <h3><i class="fa-solid fa-table-tennis-paddle-ball"></i><br>Ping Pong</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnPingPong" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/natacion1.webp')}} alt="natacion">
+                <h3>Natación</h3>
+            </div>
+            <div class="face back">
+                <h3><i class="fa-solid fa-person-swimming"></i><br>Natación</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnNatacion" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/ciclismo.jpg')}} alt="ciclismo">
+                <h3>Ciclismo</h3>
+            </div>
+            <div class="face back">
+                <h3><i class="fa-solid fa-person-biking"></i><br>Ciclismo</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnCiclismo" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/voley.jpg')}} alt="voley">
+                <h3>Voley</h3>
+            </div>
+            <div class="face back">
+                <h3><i class="fa-solid fa-volleyball"></i><br>Voley</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnVoley" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/tenis2.jpeg')}} alt="tenis">
+                <h3>Tenis</h3>
+            </div>
+            <div class="face back">
+                <h3><img src={{url_for('static', filename='img/tenis-icon.png')}} width="30px"><br>Tenis</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnTenis" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/boxRecreativo.jpg')}} alt="box">
+                <h3>Box recreativo</h3>
+            </div>
+            <div class="face back">
+                <h3><img src={{url_for('static', filename='img/boxeo-icon.png')}} width="30px"><br>Box recreativo</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnBoxRecreativo" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/gimnasiaArtistica.jpg')}} alt="artistica">
+                <h3>Gimnasia artística</h3>
+            </div>
+            <div class="face back">
+                <h3><img src= {{url_for('static', filename='img/gimnasiaRitmica-icon.png')}} width="30px"><br>Gimnasia artística</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnGimnasiaArtistica" type="button">DETALLES</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src={{url_for('static', filename='img/ajedrez.jpg')}} alt="ajedrez">
+                <h3>Ajedrez</h3>
+            </div>
+            <div class="face back">
+                <h3><i class="fa-solid fa-chess"></i><br>Ajedrez</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius harum molestiae iste, nihil doloribus
+                    fugiat distinctio ducimus maxime totam nulla fuga odio non aperiam eos?</p>
+                <button class="botonDetalles" id="btnAjedrez" type="button">DETALLES</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="textoDeportes">
+        <div class="laterales" id="ladoIzquierdoTexto"><img src={{url_for('static', filename='img/logoClubTransparente.png')}} alt=""></div>
+        <div id="textoCentral">
+            <h1 id="iconoDeporte">Ícono del deporte</h1>
+            <h1 id="tituloDeporte">NOMBRE DEL DEPORTE</h1>
+            <h3>Horarios de prácticas</h3>
+            <p id="horaPractica">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <h3>Detalles</h3>
+            <p id="contenidoDeporte"><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores, quis illo
+                eligendi
+                recusandae incidunt vitae in nesciunt fugit blanditiis inventore. Assumenda iure a natus doloribus
+                magnam
+                repellat velit quisquam! Obcaecati quae
+                quas tempora expedita id eum ducimus cum, dicta consectetur quam perspiciatis corrupti eos? Inventore
+                rem,
+                hic veniam tempore distinctio voluptatem laudantium sequi doloribus vel, omnis quia, numquam atque?
+                Tempora,
+                in! Vel inventore,
+                assumenda iste esse nostrum cum blanditiis possimus libero illum praesentium fuga ad voluptates totam
+                itaque
+                repellendus officiis hic nesciunt modi velit fugiat sapiente, consectetur dolore? Consequuntur.</i></p>
+       
+        <div id="imagenDeporte"></div>
+
+        <button class="botonDetalles" id="btnVolver" type="button">VOLVER</button>
+    </div>
+        <div class="laterales" id="ladoDerechoTexto"><img src={{url_for('static', filename='img/logoClubTransparente.png')}} alt=""></div>
+    </div>
+
+{%endblock%}
+{%block scripts%}
+<script src="https://kit.fontawesome.com/9afbaf2f11.js" crossorigin="anonymous"></script>
+<script src={{url_for('static', filename='js/deportes.js')}}></script>
+{%endblock%}

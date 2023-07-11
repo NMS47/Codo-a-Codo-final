@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Socio {{accion}} corectamente!{% endblock %}
+{% block content %}
+<div class="container mx-auto">
+    <h1>El Socio ha sido {{accion}} correctamente!</h1>
+    <br>
+    <div class="opciones d-flex w-50">
+    <p >{{metodo|capitalize}} otro usuario</p><span><a href="{{url_for("formulario_socio")}}">{{simbolo}}</a></span>
+    </div>
+    <br>
+    <div class="opciones d-flex w-50 ">
+    <p>Volver al inicio</p><span><a href="{{url_for("index")}}">🏠</a></span>
+    </div>
+</div>
+{%endblock%}

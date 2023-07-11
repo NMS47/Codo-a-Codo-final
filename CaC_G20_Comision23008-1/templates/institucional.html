@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{%block head %}
+{{super()}}
+<link rel="stylesheet" href={{url_for('static', filename='css/institucional.css')}}>
+{%endblock%}
+{% block title %}Institucional{% endblock %}
+{% block content %}
+
+    <center>
+        <h1 class="quienesSomos"><img src={{url_for('static', filename='img/logo_club.ico')}} alt="Logo club deportivo" width="40px">¿Quienes somos?</h1>
+    
+    <p class="quienesSomos">Somos un club que promueve toda actividad deportiva. Nos gusta jugar y competir, entendemos
+        que es lo más importante. Ganar es una consecuencia de lo anterior, no un objetivo a cumplir.
+        En nuestros espacios recibimos a toda persona que quiera jugar y competir en cualquiera de nuestras actividades.
+        Siempre respetando la esencia del juego y deporte, a quienes acompañan en la actividad, y por sobre todo al
+        rival. <br>
+        Estamos orgullosos de quienes participan de nuestras actividades y acompañan a nuestros deportistas, siempre
+        representando a nuestros ideales. Siendo el ejemplo para nuestros deportistas más jóvenes. Y un faro para
+        quienes ven la competencia del mismo modo que nosotros, y no se hayan en tiempos donde ganar es todo.
+        Recibimos a todos los que quieran sumarse a nuestra visión, y anticipamos que mientras más seamos, más crecemos.
+        Así que sumate que si o si vamos tener a crear un lugar para que puedas jugar.
+    </p>
+</center>
+    <center>
+        <h2 class="quienesSomos">Estamos aquí</h2>
+        <span>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6563.6499678745!2d-58.50022496066974!3d-34.65912264301904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc90f888306e1%3A0x29e612444d5ec324!2sOliden%202182%2C%20C1440%20CQR%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1682982165902!5m2!1ses-419!2sar"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </span>
+    </center>
+    <br>
+
+{%endblock%}
