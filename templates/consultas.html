@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{%block head%}
+{{super()}}
+<link rel="stylesheet" href={{url_for('static', filename='css/consultas.css')}}> 
+{%endblock%}
+{% block title %}Consultas{% endblock %}
+{% block content %}
+
+<section id="principal " class="d-md-flex mx-auto">
+
+    <div id="sector_central "
+        class="h-100 col-sm-12 col-md-12 col-lg-12 m-0 justify-content-center align-items-center ">
+        <center>
+            <h3 style="color: white;">FORMULARIO DE CONSULTAS/SUGERENCIAS</h3>
+        </center>
+
+        <div class="ubicacion-contenedor">
+            
+            <div class="gridUbicacFormulario ">
+                <form class="formulario w-50 mx-auto" name="form" action="mostrarDatos.html" class="mx-auto">
+                    <table id="tabla" class="mx-auto">
+                        <tr>
+                            <td class="col1">
+                                <label for="apellido">Apellido:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="apellido" placeholder="Ingrese su apellido...">
+                            </td class="col2">
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="nombre">Nombre:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="nombre" placeholder="Ingrese su nombre...">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Correo electrónico:</label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" placeholder="Ingrese su correo electrónico...">
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td>
+                                <label for="fNacimiento">Fecha de nacimiento:</label>
+                            </td>
+                            <td>
+                                <input type="date" name="fechaNacimiento">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: white;">Sexo:</td>
+                            <td>
+                                <input type="radio" name="sexo" value="Hombre"> Hombre
+                                <input type="radio" name="sexo" value="Mujer"> Mujer
+                            </td>
+                        </tr> -->
+                        <tr>
+                            <td style="color: white;">¿Cómo nos conoce?</td>
+                            <td>
+                                <input type="checkbox" name="conocimiento" value="Internet"> Internet<br>
+                                <input type="checkbox" name="conocimiento" value="Publicidad"> Publicidad<br>
+                                <input type="checkbox" name="conocimiento" value="Amigos"> Referencias de amigos<br>
+                                <input type="checkbox" name="conocimiento" value="Hincha/socio"> Soy hincha/socio<br>
+                                <input type="checkbox" name="conocimiento" value="Otros"> Otros
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="consulta">Consulta:</label>
+                            </td>
+                            <td>
+                                <textarea name="consulta" rows="4" cols="50"
+                                    placeholder="Ingrese aquí su consulta..."></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>
+                                <div class="w-25">
+                                <input type="submit" class="btn btn-primary" value="Enviar">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

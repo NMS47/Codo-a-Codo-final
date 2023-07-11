@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{%block head%}
+{{super()}}
+<script src={{url_for('static', filename='js/calcular_edad.js')}}></script>
+{%endblock%}
+{% block title %}Formulario de Inscripcion{% endblock %}
+{% block content %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<div class="container mb-10 formulario">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 d-flex justify-content-center ">
+    
+            <form method="POST" class="form-control w-75 agregar_socio">
+                {{ form.csrf_token }}
+                <div class="mb-1">
+                {{ form.dni.label(class_="form-label") }} {{ form.dni(class_="form-control w-50") }}<br>
+                </div>
+                <div class="mb-1">
+                {{ form.nombreyapellido.label(class_="form-label") }} {{ form.nombreyapellido(class_="form-control w-75") }}<br>
+                </div>
+                <div class="mb-1">
+                {{ form.email.label(class_="form-label") }} {{ form.email(class_="form-control w-75") }}<br>
+                </div>
+                <div class="mb-1">
+                {{ form.sexo.label(class_="form-label") }} {{ form.sexo(class_="form-control w-50") }}<br>
+                </div>
+                <div class="mb-1">
+                {{ form.fechanacimiento.label(class_="form-label") }} {{ form.fechanacimiento(onchange="calculateAge()", class_="form-control w-25") }}<br>
+                </div>
+                <div class="mb-1">
+                {{ form.edad.label(class_="form-label") }} {{ form.edad(class_="form-control w-25") }}<br>
+                </div>
+                <div class="mb-1">
+                {{ form.telefono.label(class_="form-label") }} {{ form.telefono(class_="form-control w-50") }}<br>
+                </div>
+                <div class="mb-1">
+                {{ form.submit(class_="btn btn-success") }}
+                </div>
+              </form>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

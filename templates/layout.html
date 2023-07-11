@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href={{url_for('static', filename='img/logo_club.ico')}}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href={{url_for('static', filename='css/index.css')}}>
+    <link rel="stylesheet" href={{url_for('static', filename='css/headerYFooter.css')}}>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap&Bebas+Neue&display=swap" rel="stylesheet">
+        
+    
+    <title>{% block title %}{% endblock %}</title>
+    
+
+    <script src={{url_for('static', filename='js/headerYFooter.js')}}></script>
+    {% endblock %}
+  </head>
+  <body>
+        <div id="contenedor-pagina">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                      <a class="navbar-brand ms-1" href="#"><img src={{url_for('static', filename='img/logo_club.ico')}} alt="" width="30" height="24" class="d-inline-block align-text-top"></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Socios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="{{url_for('obtener_socios')}}">Ver socios</a></li>
+                              <li><a class="dropdown-item" href="{{url_for('formulario_socio')}}">Agregar socios</a></li>
+                              <li><a class="dropdown-item" href="{{url_for('modificacion_socio')}}">Modificar socio</a></li>
+                              <li><a class="dropdown-item" href="{{url_for('borrar_socio')}}">Eliminar socio</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Deportes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="{{url_for('deportes')}}">Ver Deportes</a></li>
+                              <li><a class="dropdown-item" href="{{url_for('agregar_inscripcion')}}">Inscribir a deporte</a></li>
+                              <li><a class="dropdown-item" href="{{url_for('obtener_inscripciones')}}">Ver inscripciones</a></li>
+                              <li><a class="dropdown-item" href="{{url_for('quitar_inscripcion')}}">Eliminar inscripcion</a></li>
+                            </ul>
+                          </li>
+                          <!-- <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('deportes')}}">Deportes</a>
+                          </li>  -->
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('institucional')}}">Institucional</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('consultas')}}">Consultas</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                <!-- <div class="container-fluid fondo contenido">
+                    <div class="header">
+                        <script>crearHeader()</script>
+                    </div>
+                </div> -->
+            </header>
+            <div id="content-wrap">
+            {% block content %}{% endblock %}
+            </div>
+            <footer>
+                <div class="footer">
+                    <script>
+                        mostrarFooter()
+                    </script>
+                </div>
+            </footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+            <script src={{url_for('static', filename='js/apiPokemon.js')}}></script>
+            {%block scripts%}{%endblock%}
+        </div>
+    </body>
+</html>

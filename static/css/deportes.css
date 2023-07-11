@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    background-color: rgb(225, 0, 0);
+    border-radius: 4px;
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+#tarjetasDeportes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(92, 92, 92);
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+    align-items: center;
+
+
+}
+
+.botonDetalles {
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 50%;
+    background-color: rgb(89, 88, 88);
+    border-radius: 10px;
+    margin-top: 5px;
+    color: white;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+/* TEXTO DETALLES */
+#textoCentral {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 35px;
+    height: 100vh;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(180, 179, 179);
+    border-radius: 0%;
+    border-color: black;
+}
+
+.ancho-img {
+    width: 60px;
+}
+
+#ladoIzquierdoTexto {
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0%;
+}
+
+#ladoDerechoTexto {
+    background-color: red;
+    border-radius: 20px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0%;
+}
+
+@media only screen and (max-width:767px) {
+    #textoDeportes {
+        display: grid;
+        grid-template-columns: 100%;
+        height: auto;
+    }
+
+    #ladoIzquierdoTexto,
+    #ladoDerechoTexto {
+        display: flex;
+        height: 100%;
+    }
+
+    .laterales>img {
+        height: 80px;
+        width: 80px;
+
+    }
+}
+
+@media only screen and (min-width:768px) {
+    #textoDeportes {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    #ladoIzquierdoTexto {
+        height: 100vh;
+    }
+
+    #ladoDerechoTexto {
+        display: none;   /* Se oculta el lateral derecho "rojo" en pantallas medianas. */
+        height: 100px;
+        width: 98vw;
+    }
+
+    #ladoIzquierdoTexto>img {
+        height: 130px;
+        width: 130px;
+    }
+
+    #ladoDerechoTexto>img {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    #textoDeportes {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+    }
+
+    #ladoIzquierdoTexto,
+    #ladoDerechoTexto {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #ladoIzquierdoTexto>img {
+        height: 180px;
+        width: 180px;
+    }
+
+    #ladoDerechoTexto>img {
+        height: 180px;
+        width: 180px;
+    }
+
+}

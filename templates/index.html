@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}C.S.D.W.{% endblock %}
+{% block content %}
+<center>
+    <div>
+        <img src={{url_for('static', filename='img/logo_club.ico')}} alt="Logo club deportivo" width="300px">
+        <h1>CLUB SOCIAL DEPORTIVO WOLLFF</h1>
+    </div>
+</center>
+<br>
+<div class="container-fluid novedad">
+    <h2>¡Tenemos novedades!</h2>
+    <ul>
+        <li>Próximamente daremos inauguración a nuestros deportes para niños y niñas entre 4 y 8 años.</li>
+        <li>Para nosotros es un evento sin precedentes y muy importante, y como tal queremos celebrarlo.</li>
+        <li>Para dicha celebración queremos que el niño o niña que venga a la inauguración, elija un Pokemón,
+            y si es sorteado va a corresponder a un premio.</li>
+        <li>Los premios que sortearemos serán comida del buffet, indumentaria del club, y algún que otro premio
+            sorpresa.</li>
+        <li>La fecha y el horario del evento serán anunciados a la brevedad. ¡No se lo pierdan!</li>
+    </ul>
+</div>
+<br>
+<div class="aclaracion p1">
+    <h3>Aclaración:</h3>
+    <p>Los premios con más de un ganador serán compartidos, o duplicados según corresponda. (consulte en
+        administración,
+        o a través de nuestra sección de consultas en esta misma web si tiene dudas.).</p>
+</div>
+<br>
+<center>
+    <div class="cajaDeBoton">
+        <button class="boton p2" id="buscar">Elegir un Pokemón aleatorio</button>
+    </div>
+</center>
+
+<div class="cuadroPokemon"></div>
+{% endblock %}
+

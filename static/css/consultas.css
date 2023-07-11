@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type=text],
+input[type=date],
+input[type=email],
+select {
+    width: 95%;
+    padding: 1vw;
+    margin: 1vw;
+    display: inline-block;
+    border: 1vw;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+textarea {
+    height: 200px;
+    min-height: 100px;
+    resize: both;
+    width: 95%;
+    padding: 1vw;
+    margin: 1vw;
+    border: 1vw;
+    border-radius: 4px;
+
+
+}
+
+textarea:hover {
+    border: 4vw;
+    border-color: black;
+    background-color: lightgray;
+}
+
+
+
+input[type=text]:hover,
+input[type=date]:hover,
+input[type=email]:hover,
+input[type=checkbox]:hover {
+    border: 4vw;
+    border-color: black;
+    background-color: lightgray;
+}
+
+
+
+input[type=submit] {
+    width: 100%;
+    background-color: red;
+    padding: 14px 20px;
+    margin: 8px 6px;
+    border-radius: 5px;
+    border-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+input[type=submit]:hover {
+    background-color: darkred;
+    font-size: 1.2vw;
+}
+
+
+
+.formulario {
+    border-radius: 5px;
+    border-color: black;
+    background-color: rgb(65, 65, 65);
+    padding: 2rem;
+    margin: 1% 5%;
+    align-self: center;
+    color: white;
+}
+
+
+
+table {
+    border-color: black;
+    width: 100%;
+
+}
+
+.col1 {
+    width: 20%;
+}
+
+.col2 {
+    width: 80%;
+}
+
+
+.ubicacion-contenedor{
+    display: grid;
+}
+
+/* @media only screen and (max-width:900px) {
+    .ubicacion-contenedor {
+        grid-template-columns: 100%;
+    }
+  }
+  
+  @media only screen and (min-width:900px) {
+    .ubicacion-contenedor {
+        grid-template-columns: 20% 60% 20%
+    }
+  } */

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #3D0000;
+    overflow-x: hidden;
+}
+
+#contenedor-pagina{
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 6.2rem;
+  }
+
+h1{
+    font-size: 3rem;
+    color: #F9DBBB;
+    padding-bottom: 3rem;
+    font-family: Bebas Neue, sans-serif;
+}
+h2{
+    font-size: 2rem;
+}
+.nombre {
+    text-decoration: underline;
+    font-size:xx-large;
+}
+
+.p0 {
+    font-style: italic;
+    font-size: large;
+}
+
+.p1 {
+    font-size: medium;
+    font-style: oblique;
+    
+}
+
+.p2 {
+    font-size: large;
+    text-decoration: double;
+    text-decoration-color: white;
+}
+
+.cuadroPokemon {
+    margin: 20%;
+    margin-top: 1%;
+}
+
+.infoPokemon, .boton, .novedad {
+    border-style: groove;
+    border-radius: 4px;
+    border-color:#CD1818;
+    margin: auto;
+    padding: 5px;
+    background-color: black;
+    color:white;
+}
+
+.boton:hover {
+    border-color: black;
+    background-color: red;
+    color: black;
+}
+
+.experiencia, .aclaracion {
+    border-style: groove;
+    border-radius: 4px;
+    border-color:black;
+    margin: auto;
+    padding: 8px;
+    background-color:#4E3636;
+    color:white;
+}
+.novedad, .aclaracion{
+    max-width: 70%;
+    line-height: 2rem;
+}
+.habilidades {
+    border-style:double;
+    border-radius: 4px;
+    border-color:white;
+    margin: auto;
+    padding: 10px;
+    background-color: black;
+    color:red;
+}
+
+
+.agregar_socio{
+    background-color: rgb(24, 22, 22) !important;
+    color: beige !important;
+    font-weight: bold !important;
+}
+
+.opciones{
+    background-color: #3D0000;
+    color: #F9DBBB;
+    font-size: 1.5rem;
+}
+
+.opciones p a:hover{
+    background-color: #8f8585;
+}
+
+.msj_error{
+    background-color: #F9DBBB;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}Inscribir a deporte{% endblock %}
+{% block content %}
+<div class="container mx-auto">
+    <h1>Inscribir a deporte:</h1>
+    <form  action="" method="post">
+        <div class="opciones row">
+            <div class="col col-lg-4 col-md-3">
+                <label for="basic-url" class="form-label">Ingresa DNI del socio que quieres inscribir:</label>
+                <div class="input-group">
+                    <span class="input-group-text">DNI</span>
+                    <input name='dni' type="text" class="form-control" aria-describedby="basic-addon3" required>
+                </div>
+            </div>
+        <div class="opciones row">
+                <div class="col col-lg-4 col-md-3">
+                    <label for="sports" class="form-label">Selecciona un deporte:</label>
+                    <select name="sports" id="sports" class="form-select" multiple required>
+                        <option value="1">Crossfit</option>
+                        <option value="2">Atletismo</option>
+                        <option value="3">Futbol</option>
+                        <option value="4">Hockey</option>
+                        <option value="5">Basketball</option>
+                        <option value="6">Artes Marciales</option>
+                        <option value="7">Pin Pong</option>
+                        <option value="8">Natacion</option>
+                        <option value="9">Ciclismo</option>
+                        <option value="10">Voley</option>
+                        <option value="11">Tenis</option>
+                        <option value="12">Box Recreativo</option>
+                        <option value="13">Gimnasia Artistica</option>
+                        <option value="14">Ajedrez</option>
+                    </select>
+                </div>
+        </div>
+        <div class="opciones row">
+                <div class="col col-lg-4 col-md-3">
+                    <input class="btn btn-primary mt-2"type="submit" value="Inscribir">
+                </div>
+        </div>
+    </form>
+
+        
+    </form>
+</div>
+{%endblock%}
